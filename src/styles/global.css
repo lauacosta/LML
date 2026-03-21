@@ -11,6 +11,7 @@
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
+  --text-200: #c7c7c7;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow:
     0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
@@ -30,6 +31,15 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Epoch";
+  src: url("/fonts/epoch.woff2") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: "Atkinson", sans-serif;
   margin: 0;
@@ -56,6 +66,7 @@ h6 {
 }
 h1 {
   font-size: 3.052em;
+  font-family: "Epoch", "Sans Serif";
 }
 h2 {
   font-size: 2.441em;
@@ -125,6 +136,9 @@ hr {
 @media (max-width: 720px) {
   body {
     font-size: 18px;
+  }
+  main {
+    padding: 1em;
   }
 }
 

@@ -5,23 +5,23 @@ import HeaderLink from "./HeaderLink.astro";
 
 <header>
   <nav>
-    <h2>
-      <a href="/"
-        ><svg
-          width="90"
-          height="57"
-          viewBox="0 0 90 57"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2 55.0098C3.80393 54.8441 23.1551 39.6018 26.763 33.9687M26.763 33.9687C30.3708 28.3357 43.9823 5.80355 35.9466 2.32432C27.9109 -1.1549 20.2033 25.1879 26.763 33.9687ZM26.763 33.9687C31.8377 40.7616 39.0625 52.0276 59.7257 37.2823M59.7257 37.2823C64.4815 31.9807 81.2088 5.80371 73.1731 2.32449C65.1374 -1.15474 53.9859 26.6002 59.7257 37.2823ZM59.7257 37.2823C62.8415 43.0811 71.1087 55.0098 88 55.0098"
-            stroke="#000"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg></a
-      >
-    </h2>
+    <a href="/"
+      ><svg
+        width="90"
+        height="57"
+        viewBox="0 0 90 57"
+        fill="none"
+        class="logo"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2 55.0098C3.80393 54.8441 23.1551 39.6018 26.763 33.9687M26.763 33.9687C30.3708 28.3357 43.9823 5.80355 35.9466 2.32432C27.9109 -1.1549 20.2033 25.1879 26.763 33.9687ZM26.763 33.9687C31.8377 40.7616 39.0625 52.0276 59.7257 37.2823M59.7257 37.2823C64.4815 31.9807 81.2088 5.80371 73.1731 2.32449C65.1374 -1.15474 53.9859 26.6002 59.7257 37.2823ZM59.7257 37.2823C62.8415 43.0811 71.1087 55.0098 88 55.0098"
+          stroke="#000"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg></a
+    >
+
     <div class="internal-links">
       <HeaderLink href="/">Inicio</HeaderLink>
       <HeaderLink href="/blog">Desafios</HeaderLink>
@@ -31,42 +31,52 @@ import HeaderLink from "./HeaderLink.astro";
 </header>
 <style>
   header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
     margin: 0;
-    padding: 0 1em;
-    background: white;
+    color: #fff;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
-  h2 {
-    margin: 0;
-    font-size: 1em;
+
+  .logo {
+    height: 40px;
+    width: fit-content;
+    path {
+      stroke: #fff;
+    }
   }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    --max-width: 1400px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+    padding-block: 1.5rem;
   }
   nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
+    color: var(--text-200);
     text-decoration: none;
+
+    display: grid;
+    align-content: center;
   }
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+    color: #fff;
   }
-  .social-links,
-  .social-links a {
+
+  .internal-links {
     display: flex;
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
+    gap: 2.5rem;
+
+    font-size: 1rem;
   }
 </style>
