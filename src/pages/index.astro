@@ -13,7 +13,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   <body>
     <Header />
     <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
+      <div class="hero-section"></div>
+
       <p>
         Welcome to the official <a href="https://astro.build/">Astro</a> blog starter
         template. This template serves as a lightweight, minimally-styled starting
@@ -59,5 +60,16 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       </p>
     </main>
     <Footer />
+    <style>
+      .hero-section {
+        height: 100vh;
+        width: 100%;
+
+        background-image: url("../assets/lospibe.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
   </body>
 </html>
