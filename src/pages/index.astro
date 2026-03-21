@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import TeamPresentation from "../components/TeamPresentation.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
@@ -13,21 +14,52 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
   <body>
     <Header />
     <main>
-      <div class="hero-section">
-        <div class="index-wrapper">
+      <section class="hero-section">
+        <div class="hero-wrapper">
           <h1>lml gestión</h1>
           <div class="hero-info">
             <p>Gestión Gerencial</p>
             <p>Portfolio - 2026</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section>
+        <div class="index-wrapper">
+          <h2>Conocé al equipo</h2>
+          <TeamPresentation
+            nombre="Lautaro Acosta"
+            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+          />
+          <TeamPresentation
+            nombre="Lautaro Faccini"
+            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+          />
+          <TeamPresentation
+            nombre="Felipe Fidanza"
+            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+          />
+          <TeamPresentation
+            nombre="Tobias Stegmayer"
+            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+          />
+          <TeamPresentation
+            nombre="Yamil Moselli"
+            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+          />
+        </div>
+      </section>
 
       <p>
-        Welcome to the official <a href="https://astro.build/">Astro</a> desafios starter
-        template. This template serves as a lightweight, minimally-styled starting
-        point for anyone looking to build a personal website, desafios, or portfolio with
-        Astro.
+        Welcome to the official <a href="https://astro.build/">Astro</a> desafios
+        starter template. This template serves as a lightweight, minimally-styled
+        starting point for anyone looking to build a personal website, desafios, or
+        portfolio with Astro.
       </p>
       <p>
         This template comes with a few integrations already configured in your
@@ -46,7 +78,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
           >
         </li>
         <li>
-          Check out the included desafios posts in <code>src/content/desafios/</code>
+          Check out the included desafios posts in <code
+            >src/content/desafios/</code
+          >
         </li>
         <li>
           Customize the desafios post page layout in <code
@@ -69,6 +103,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     </main>
     <Footer />
     <style>
+      .section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+      }
+
       .hero-section {
         height: 100dvh;
         width: 100%;
@@ -85,6 +127,19 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
       }
 
       .index-wrapper {
+        --max-width: 1400px;
+        --padding: 1rem;
+
+        width: min(var(--max-width), 100% - (var(--padding) * 2));
+        margin-inline: auto;
+        padding-block: 8rem;
+
+        h2 {
+          font-size: 8rem;
+        }
+      }
+
+      .hero-wrapper {
         --max-width: 754px;
         --padding: 1rem;
 
