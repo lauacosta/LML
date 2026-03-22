@@ -1,7 +1,12 @@
 ---
+import FormattedDate from "../components/FormattedDate.astro";
 import TeamPresentation from "../components/TeamPresentation.astro";
-
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("desafios")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <Layout
@@ -49,50 +54,40 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <p>
-      Welcome to the official <a href="https://astro.build/">Astro</a> desafios starter
-      template. This template serves as a lightweight, minimally-styled starting point
-      for anyone looking to build a personal website, desafios, or portfolio with
-      Astro.
-    </p>
-    <p>
-      This template comes with a few integrations already configured in your
-      <code>astro.config.mjs</code> file. You can customize your setup with
-      <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
-      like Tailwind, React, or Vue to your project.
-    </p>
-    <p>Here are a few ideas on how to get started with the template:</p>
-    <ul>
-      <li>Edit this page in <code>src/pages/index.astro</code></li>
-      <li>
-        Edit the site header items in <code>src/components/Header.astro</code>
-      </li>
-      <li>
-        Add your name to the footer in <code>src/components/Footer.astro</code>
-      </li>
-      <li>
-        Check out the included desafios posts in <code
-          >src/content/desafios/</code
-        >
-      </li>
-      <li>
-        Customize the desafios post page layout in <code
-          >src/layouts/BlogPost.astro</code
-        >
-      </li>
-    </ul>
-    <p>
-      Have fun! If you get stuck, remember to
-      <a href="https://docs.astro.build/">read the docs</a>
-      or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-    </p>
-    <p>
-      Looking for a desafios template with a bit more personality? Check out
-      <a href="https://github.com/Charca/astro-desafios-template"
-        >astro-desafios-template</a
-      >
-      by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-    </p>
+    <section>
+      <div class="index-wrapper">
+        <h2 id="desafios">Desafíos</h2>
+        <div class="desafios-grid">
+          {
+            posts.map((post) => (
+              <a href={`/desafios/${post.id}/`} class="desafio-card">
+                <article>
+                  <div class="card-image-wrapper">
+                    {post.data.heroImage && (
+                      <Image
+                        src={post.data.heroImage}
+                        alt={post.data.title}
+                        width={720}
+                        height={400}
+                        loading="lazy"
+                         transition:name={`image-${post.data.title}`}
+                      />
+                    )}
+                  </div>
+                  <div class="card-content">
+                    <p class="card-date">
+                      <FormattedDate date={post.data.pubDate} />
+                    </p>
+                    <h3>{post.data.title}</h3>
+                    <span class="view-more">Leer desafío →</span>
+                  </div>
+                </article>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
@@ -161,6 +156,78 @@ import Layout from "../layouts/Layout.astro";
         color: var(--text-200);
         margin: 0;
       }
+    }
+
+
+  }
+
+  .desafios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .desafio-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    group;
+
+  }
+
+  .card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a1a1a;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .desafio-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .card-date {
+    color: var(--text-200);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  .view-more {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .desafio-card:hover .view-more {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    .desafios-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>
