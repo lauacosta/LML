@@ -25,7 +25,7 @@ const posts = (await getCollection("desafios")).sort(
 
     <section>
       <div class="index-wrapper">
-        <h2>Conocé al equipo</h2>
+        <h2>Nuestro equipo</h2>
         <TeamPresentation
           nombre="Lautaro Acosta"
           linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
@@ -142,6 +142,16 @@ const posts = (await getCollection("desafios")).sort(
         color: var(--text-200);
         margin: 0;
       }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-wrapper h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 4rem;
     }
   }
 </style>

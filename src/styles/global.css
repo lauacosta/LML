@@ -244,3 +244,18 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 900px) {
+  .index-wrapper {
+    padding-block: 4rem;
+    margin-top: 88px;
+  }
+
+  .hero-wrapper h1 {
+    font-size: 5rem;
+  }
+
+  .index-wrapper h2 {
+    font-size: 4rem;
+  }
+}
