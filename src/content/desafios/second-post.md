@@ -1,7 +1,7 @@
 ---
-title: "Desafío generico de prueba"
+title: "Desafío generico de prueba 2"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+pubDate: "Jul 08 2023"
 heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 

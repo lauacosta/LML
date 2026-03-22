@@ -10,7 +10,7 @@ const desafios = defineCollection({
       description: z.string(),
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
-      heroImage: z.optional(image()),
+      heroImage: image(),
     }),
 });
 

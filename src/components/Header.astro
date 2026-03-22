@@ -74,10 +74,6 @@ const { isNotHome } = Astro.props;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
 
-  .not-home {
-    background: rgba(0, 0, 0, 0.5);
-  }
-
   .logo {
     height: 40px;
     width: fit-content;
@@ -115,5 +111,19 @@ const { isNotHome } = Astro.props;
     gap: 2.5rem;
 
     font-size: 1rem;
+  }
+
+  .not-home {
+    background-color: #fff;
+    .internal-links a {
+      color: rgb(var(--gray));
+    }
+
+    .internal-links a.active {
+      color: #000;
+    }
+    .logo-path {
+      stroke: #000;
+    }
   }
 </style>
