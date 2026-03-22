@@ -6,22 +6,23 @@ const { isNotHome } = Astro.props;
 
 <header class:list={["header", { "not-home": isNotHome }]}>
   <nav>
-    <a href="/" transition:persist
-      ><svg
+    <a href="/" transition:persist class="logo-link">
+      <svg
         width="90"
         height="57"
         viewBox="0 0 90 57"
         fill="none"
-        class="logo"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+        class="logo">
         <path
-          d="M2 55.0098C3.80393 54.8441 23.1551 39.6018 26.763 33.9687M26.763 33.9687C30.3708 28.3357 43.9823 5.80355 35.9466 2.32432C27.9109 -1.1549 20.2033 25.1879 26.763 33.9687ZM26.763 33.9687C31.8377 40.7616 39.0625 52.0276 59.7257 37.2823M59.7257 37.2823C64.4815 31.9807 81.2088 5.80371 73.1731 2.32449C65.1374 -1.15474 53.9859 26.6002 59.7257 37.2823ZM59.7257 37.2823C62.8415 43.0811 71.1087 55.0098 88 55.0098"
-          stroke="#000"
+          class="logo-path"
+          d="M2 54.8619C8.5 50.3619 21 40.8608 25.5 35.3608C31.2079 28.3845 34 21.8619 36 16.8619C38 11.8619 39.5463 5.14664 36.5 2.86187C32.5 -0.13822 26.3869 4.65431 24.5 17.8619C22.5 31.861 31.5 43.3619 42 44.3619C52.5 45.3619 64 36.3618 72 17.8619C80 -0.638074 69.616 -1.13836 65 7.36164C62.6139 11.7555 43 48.8614 88 54.8619"
+          stroke="white"
           stroke-width="4"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
-      </svg></a
-    >
+      </svg>
+    </a>
 
     <div class="internal-links">
       <HeaderLink href="/">Inicio</HeaderLink>
@@ -30,6 +31,37 @@ const { isNotHome } = Astro.props;
     </div>
   </nav>
 </header>
+
+<script>
+  // Función para inicializar la animación
+  const initLogoAnimation = () => {
+    const logoLink = document.querySelector(".logo-link");
+    const path = document.querySelector(".logo-path") as SVGPathElement;
+
+    if (path && logoLink) {
+      const length = path.getTotalLength();
+
+      // Estado inicial: oculto
+      path.style.strokeDasharray = `${length} ${length}`;
+      path.style.strokeDashoffset = "0"; // Empezamos visible o podrías empezar en 'length'
+
+      logoLink.addEventListener("mouseenter", () => {
+        // Reiniciar animación al entrar
+        path.style.transition = "none";
+        path.style.strokeDashoffset = `${length}`;
+
+        // El "hack" para forzar el redibujado antes de la transición
+        path.getBoundingClientRect();
+
+        path.style.transition = "stroke-dashoffset 0.8s ease-in-out";
+        path.style.strokeDashoffset = "0";
+      });
+    }
+  };
+
+  // Importante: Ejecutar en carga inicial y en cada transición de página de Astro
+  document.addEventListener("astro:page-load", initLogoAnimation);
+</script>
 <style>
   header {
     position: absolute;
@@ -49,7 +81,7 @@ const { isNotHome } = Astro.props;
   .logo {
     height: 40px;
     width: fit-content;
-    path {
+    .logo-path {
       stroke: #fff;
     }
   }
