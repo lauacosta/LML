@@ -27,13 +27,12 @@ const { isNotHome } = Astro.props;
     <div class="internal-links">
       <HeaderLink href="/">Inicio</HeaderLink>
       <HeaderLink href="/desafios">Desafios</HeaderLink>
-      <HeaderLink href="/trabajointegrador">Trabajo Práctico</HeaderLink>
+      <HeaderLink href="/trabajointegrador">Integrador</HeaderLink>
     </div>
   </nav>
 </header>
 
 <script>
-  // Función para inicializar la animación
   const initLogoAnimation = () => {
     const logoLink = document.querySelector(".logo-link");
     const path = document.querySelector(".logo-path") as SVGPathElement;
@@ -41,16 +40,13 @@ const { isNotHome } = Astro.props;
     if (path && logoLink) {
       const length = path.getTotalLength();
 
-      // Estado inicial: oculto
       path.style.strokeDasharray = `${length} ${length}`;
-      path.style.strokeDashoffset = "0"; // Empezamos visible o podrías empezar en 'length'
+      path.style.strokeDashoffset = "0";
 
       logoLink.addEventListener("mouseenter", () => {
-        // Reiniciar animación al entrar
         path.style.transition = "none";
         path.style.strokeDashoffset = `${length}`;
 
-        // El "hack" para forzar el redibujado antes de la transición
         path.getBoundingClientRect();
 
         path.style.transition = "stroke-dashoffset 0.8s ease-in-out";
@@ -59,7 +55,6 @@ const { isNotHome } = Astro.props;
     }
   };
 
-  // Importante: Ejecutar en carga inicial y en cada transición de página de Astro
   document.addEventListener("astro:page-load", initLogoAnimation);
 </script>
 <style>
@@ -124,6 +119,17 @@ const { isNotHome } = Astro.props;
     }
     .logo-path {
       stroke: #000;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .logo {
+      height: 28px;
+    }
+
+    .internal-links {
+      font-size: 0.9rem;
+      gap: 1.5rem;
     }
   }
 </style>
