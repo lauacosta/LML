@@ -1,11 +1,12 @@
 ---
-import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
+
+const { isNotHome } = Astro.props;
 ---
 
-<header>
+<header class:list={["header", { "not-home": isNotHome }]}>
   <nav>
-    <a href="/"
+    <a href="/" transition:persist
       ><svg
         width="90"
         height="57"
@@ -39,6 +40,10 @@ import HeaderLink from "./HeaderLink.astro";
     margin: 0;
     color: #fff;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+
+  .not-home {
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .logo {

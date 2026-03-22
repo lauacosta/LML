@@ -1,174 +1,166 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import TeamPresentation from "../components/TeamPresentation.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section class="hero-section">
-        <div class="hero-wrapper">
-          <h1>lml gestión</h1>
-          <div class="hero-info">
-            <p>Gestión Gerencial</p>
-            <p>Portfolio - 2026</p>
-          </div>
+<Layout
+  title="LML Gestión"
+  description="LML Gestión es un equipo de trabajo conformado por Lautaro Acosta, Lautaro Faccini, Felipe Fidanza, Tobias Stegmayer y Moselli Yamil; alumnos de la catedra de Gestión Gerencial. Este portfolio tiene como objetivo presentar las actividades realizadas en el cursado de la materia.">
+  <main>
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <h1>lml gestión</h1>
+        <div class="hero-info">
+          <p>Gestión Gerencial</p>
+          <p>Portfolio - 2026</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <div class="index-wrapper">
-          <h2>Conocé al equipo</h2>
-          <TeamPresentation
-            nombre="Lautaro Acosta"
-            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
-            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
-          />
-          <TeamPresentation
-            nombre="Lautaro Faccini"
-            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
-            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
-          />
-          <TeamPresentation
-            nombre="Felipe Fidanza"
-            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
-            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
-          />
-          <TeamPresentation
-            nombre="Tobias Stegmayer"
-            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
-            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
-          />
-          <TeamPresentation
-            nombre="Yamil Moselli"
-            linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
-            linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
-          />
-        </div>
-      </section>
+    <section>
+      <div class="index-wrapper">
+        <h2>Conocé al equipo</h2>
+        <TeamPresentation
+          nombre="Lautaro Acosta"
+          linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+          linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+        />
+        <TeamPresentation
+          nombre="Lautaro Faccini"
+          linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+          linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+        />
+        <TeamPresentation
+          nombre="Felipe Fidanza"
+          linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+          linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+        />
+        <TeamPresentation
+          nombre="Tobias Stegmayer"
+          linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+          linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+        />
+        <TeamPresentation
+          nombre="Yamil Moselli"
+          linkedin="https://www.linkedin.com/in/tobias-stegmayer-612551218/"
+          linkVideo="https://www.youtube.com/watch?v=DOizrHLVZ4Y"
+        />
+      </div>
+    </section>
 
-      <p>
-        Welcome to the official <a href="https://astro.build/">Astro</a> desafios
-        starter template. This template serves as a lightweight, minimally-styled
-        starting point for anyone looking to build a personal website, desafios, or
-        portfolio with Astro.
-      </p>
-      <p>
-        This template comes with a few integrations already configured in your
-        <code>astro.config.mjs</code> file. You can customize your setup with
-        <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
-        like Tailwind, React, or Vue to your project.
-      </p>
-      <p>Here are a few ideas on how to get started with the template:</p>
-      <ul>
-        <li>Edit this page in <code>src/pages/index.astro</code></li>
-        <li>
-          Edit the site header items in <code>src/components/Header.astro</code>
-        </li>
-        <li>
-          Add your name to the footer in <code>src/components/Footer.astro</code
-          >
-        </li>
-        <li>
-          Check out the included desafios posts in <code
-            >src/content/desafios/</code
-          >
-        </li>
-        <li>
-          Customize the desafios post page layout in <code
-            >src/layouts/BlogPost.astro</code
-          >
-        </li>
-      </ul>
-      <p>
-        Have fun! If you get stuck, remember to
-        <a href="https://docs.astro.build/">read the docs</a>
-        or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-      </p>
-      <p>
-        Looking for a desafios template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-desafios-template"
-          >astro-desafios-template</a
+    <p>
+      Welcome to the official <a href="https://astro.build/">Astro</a> desafios starter
+      template. This template serves as a lightweight, minimally-styled starting point
+      for anyone looking to build a personal website, desafios, or portfolio with
+      Astro.
+    </p>
+    <p>
+      This template comes with a few integrations already configured in your
+      <code>astro.config.mjs</code> file. You can customize your setup with
+      <a href="https://astro.build/integrations">Astro Integrations</a> to add tools
+      like Tailwind, React, or Vue to your project.
+    </p>
+    <p>Here are a few ideas on how to get started with the template:</p>
+    <ul>
+      <li>Edit this page in <code>src/pages/index.astro</code></li>
+      <li>
+        Edit the site header items in <code>src/components/Header.astro</code>
+      </li>
+      <li>
+        Add your name to the footer in <code>src/components/Footer.astro</code>
+      </li>
+      <li>
+        Check out the included desafios posts in <code
+          >src/content/desafios/</code
         >
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-    <style>
-      .section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+      </li>
+      <li>
+        Customize the desafios post page layout in <code
+          >src/layouts/BlogPost.astro</code
+        >
+      </li>
+    </ul>
+    <p>
+      Have fun! If you get stuck, remember to
+      <a href="https://docs.astro.build/">read the docs</a>
+      or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+    </p>
+    <p>
+      Looking for a desafios template with a bit more personality? Check out
+      <a href="https://github.com/Charca/astro-desafios-template"
+        >astro-desafios-template</a
+      >
+      by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+    </p>
+  </main>
+</Layout>
 
-        align-items: center;
+<style>
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-section {
+    height: 100dvh;
+    width: 100%;
+    background-color: #070707;
+    /* background-image: url("../assets/lospibe.png"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .index-wrapper {
+    --max-width: 1400px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+    padding-block: 8rem;
+
+    h2 {
+      font-size: 8rem;
+    }
+  }
+
+  .hero-wrapper {
+    --max-width: 754px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 4));
+    margin-inline: auto;
+    margin-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    h1 {
+      color: #fff;
+      font-size: 10rem;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1rem;
+
+      p {
+        color: var(--text-200);
+        margin: 0;
       }
-
-      .hero-section {
-        height: 100dvh;
-        width: 100%;
-        background-color: #070707;
-        /* background-image: url("../assets/lospibe.png"); */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: center;
-      }
-
-      .index-wrapper {
-        --max-width: 1400px;
-        --padding: 1rem;
-
-        width: min(var(--max-width), 100% - (var(--padding) * 2));
-        margin-inline: auto;
-        padding-block: 8rem;
-
-        h2 {
-          font-size: 8rem;
-        }
-      }
-
-      .hero-wrapper {
-        --max-width: 754px;
-        --padding: 1rem;
-
-        width: min(var(--max-width), 100% - (var(--padding) * 4));
-        margin-inline: auto;
-        margin-block: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: center;
-        gap: 2rem;
-        h1 {
-          color: #fff;
-          font-size: 10rem;
-          margin: 0;
-        }
-
-        div {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          gap: 1rem;
-
-          p {
-            color: var(--text-200);
-            margin: 0;
-          }
-        }
-      }
-    </style>
-  </body>
-</html>
+    }
+  }
+</style>
