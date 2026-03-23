@@ -69,6 +69,8 @@ const posts = (await getCollection("desafios")).sort(
                         alt={post.data.title}
                         width={720}
                         height={400}
+                        widths={[320, 640, 720]}
+                        sizes="(max-width: 640px) 320px, (max-width: 900px) 640px, 720px"
                         loading="lazy"
                       />
                     )}
