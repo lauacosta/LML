@@ -1,3 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="90" height="57" viewBox="0 0 90 57" fill="none"><path d="M2 54.8619C8.5 50.3619 21 40.8608 25.5 35.3608C31.2079 28.3845 34 21.8619 36 16.8619C38 11.8619 39.5463 5.14664 36.5 2.86187C32.5 -0.13822 26.3869 4.65431 24.5 17.8619C22.5 31.861 31.5 43.3619 42 44.3619C52.5 45.3619 64 36.3618 72 17.8619C80 -0.638074 69.616 -1.13836 65 7.36164C62.6139 11.7555 43 48.8614 88 54.8619" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path><style>@media (prefers-color-scheme: light) { :root { filter: contrast(1) brightness(0.1); } }
-@media (prefers-color-scheme: dark) { :root { filter: none; } }
-</style></svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1075)"><rect width="1000" height="1000" fill="#000000"></rect><g transform="matrix(10,0,0,10,50,215)"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="57" viewBox="0 0 90 57" fill="none"><path d="M2 54.8619C8.5 50.3619 21 40.8608 25.5 35.3608C31.2079 28.3845 34 21.8619 36 16.8619C38 11.8619 39.5463 5.14664 36.5 2.86187C32.5 -0.13822 26.3869 4.65431 24.5 17.8619C22.5 31.861 31.5 43.3619 42 44.3619C52.5 45.3619 64 36.3618 72 17.8619C80 -0.638074 69.616 -1.13836 65 7.36164C62.6139 11.7555 43 48.8614 88 54.8619" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></g></g><defs><clipPath id="SvgjsClipPath1075"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1076)"><rect width="1000" height="1000" fill="#000000"></rect><g transform="matrix(8.88888888888889,0,0,8.88888888888889,100,246.66666666666666)"><svg xmlns="http://www.w3.org/2000/svg" width="90" height="57" viewBox="0 0 90 57" fill="none"><path d="M2 54.8619C8.5 50.3619 21 40.8608 25.5 35.3608C31.2079 28.3845 34 21.8619 36 16.8619C38 11.8619 39.5463 5.14664 36.5 2.86187C32.5 -0.13822 26.3869 4.65431 24.5 17.8619C22.5 31.861 31.5 43.3619 42 44.3619C52.5 45.3619 64 36.3618 72 17.8619C80 -0.638074 69.616 -1.13836 65 7.36164C62.6139 11.7555 43 48.8614 88 54.8619" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></g></g><defs><clipPath id="SvgjsClipPath1076"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g></svg>
