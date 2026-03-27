@@ -43,7 +43,7 @@ const getYouTubeEmbedUrl = (url: string) => {
 const embedUrl = getYouTubeEmbedUrl(linkVideo);
 ---
 
-<article>
+<article class=`${nombre == "Lautaro Acosta Quintana" ? "first-article" : ""}`>
   <div class="autoShow">
     <h3>{nombre}</h3>
 
@@ -110,6 +110,11 @@ const embedUrl = getYouTubeEmbedUrl(linkVideo);
       align-items: center;
       margin-block: auto;
     }
+  }
+
+  .first-article {
+    top: 6rem !important;
+    transform: translate(0, 0) !important;
   }
 
   .video-container {

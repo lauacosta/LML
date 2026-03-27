@@ -176,8 +176,8 @@ a {
 }
 
 .index-wrapper > article {
-  top: 6rem;
-  transform: translate(0, 0);
+  top: 6rem !important;
+  transform: translate(0, 0) !important;
 }
 
 .desafios-grid {
