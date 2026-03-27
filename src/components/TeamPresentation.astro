@@ -71,7 +71,9 @@ const embedUrl = getYouTubeEmbedUrl(linkVideo);
 <style>
   article {
     position: sticky;
-    top: 6rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
     display: flex;
 
     gap: 4rem;
@@ -128,7 +130,7 @@ const embedUrl = getYouTubeEmbedUrl(linkVideo);
 
   @keyframes text-appear {
     0% {
-      opacity: 0;
+      opacity: 1;
       transform: translateY(100px);
     }
     50% {
@@ -139,6 +141,7 @@ const embedUrl = getYouTubeEmbedUrl(linkVideo);
     100% {
       opacity: 0;
       transform: translateY(100px);
+      transform: scale(0.8);
     }
   }
 

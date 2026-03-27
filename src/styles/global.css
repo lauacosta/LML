@@ -175,6 +175,11 @@ a {
   }
 }
 
+.index-wrapper > article {
+  top: 6rem;
+  transform: translate(0, 0);
+}
+
 .desafios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
