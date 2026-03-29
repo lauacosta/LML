@@ -1,5 +1,11 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import { Image } from "astro:assets";
+import imgLautaroA from "../assets/equipo/lauti-a.webp";
+import imgLautaroF from "../assets/equipo/lauti-f.webp";
+import imgFelipe from "../assets/equipo/felipe.webp";
+import imgYamil from "../assets/equipo/yamil.webp";
+import imgTobias from "../assets/equipo/tobias.webp";
 
 const { isNotHome } = Astro.props;
 ---
@@ -26,6 +32,75 @@ const { isNotHome } = Astro.props;
 
     <div class="internal-links">
       <HeaderLink href="/">Inicio</HeaderLink>
+      <div class="dropdown">
+        <HeaderLink href="#equipo" class="dropdown-trigger">
+          Equipo
+        </HeaderLink>
+
+        <div class="dropdown-content">
+          <div class="dropdown-grid">
+            <a href="/equipo/lautaro-acosta">
+              <div class="team-item">
+                <Image
+                  src={imgLautaroA}
+                  alt="Lautaro Acosta Quintana"
+                  width={90}
+                  height={90}
+                />
+                <span>Lautaro <br />Acosta Quintana</span>
+              </div>
+            </a>
+
+            <a href="/equipo/lautaro-faccini">
+              <div class="team-item">
+                <Image
+                  src={imgLautaroF}
+                  alt="Lautaro Faccini"
+                  width={90}
+                  height={90}
+                />
+                <span>Lautaro <br />Faccini</span>
+              </div>
+            </a>
+
+            <a href="/equipo/felipe-fidanza">
+              <div class="team-item">
+                <Image
+                  src={imgFelipe}
+                  alt="Felipe Fidanza"
+                  width={90}
+                  height={90}
+                />
+                <span>Felipe <br />Fidanza</span>
+              </div>
+            </a>
+
+            <a href="/equipo/tobias-stegmayer">
+              <div class="team-item">
+                <Image
+                  src={imgTobias}
+                  alt="Tobías Stegmayer"
+                  width={90}
+                  height={90}
+                />
+                <span>Tobías <br />Stegmayer</span>
+              </div>
+            </a>
+
+            <a href="/equipo/yamil-moselli">
+              <div class="team-item">
+                <Image
+                  src={imgYamil}
+                  alt="Yamil Moselli"
+                  width={90}
+                  height={90}
+                />
+                <span>Yamil <br />Moselli</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
       <HeaderLink href="/desafios">Desafios</HeaderLink>
       <HeaderLink href="/trabajointegrador">Integrador</HeaderLink>
     </div>
@@ -66,7 +141,6 @@ const { isNotHome } = Astro.props;
     width: 100%;
     margin: 0;
     color: #fff;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
 
   .logo {
@@ -86,12 +160,11 @@ const { isNotHome } = Astro.props;
 
     width: min(var(--max-width), 100% - (var(--padding) * 2));
     margin-inline: auto;
-    padding-block: 1.5rem;
   }
   nav a {
     color: var(--text-200);
     text-decoration: none;
-
+    padding-block: 1.5rem;
     display: grid;
     align-content: center;
   }
@@ -130,6 +203,127 @@ const { isNotHome } = Astro.props;
     .internal-links {
       font-size: 0.9rem;
       gap: 1.5rem;
+    }
+  }
+
+  .dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: transparent;
+  }
+
+  .dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: auto;
+
+    margin-inline: 1rem;
+
+    background: #0c0908;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    padding: 2rem;
+    z-index: 100;
+
+    transform: translateY(10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s;
+  }
+
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    a {
+      padding-block: 0 !important;
+    }
+  }
+
+  .team-item {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    padding: 1rem !important;
+    border-radius: 8px;
+    transition: backgroundColor 0.2s;
+    text-decoration: none !important;
+  }
+
+  .team-item span {
+    color: var(--text-200);
+
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+
+  .team-item:hover span {
+    color: #fff;
+  }
+  .team-item:hover {
+    background-color: #131214;
+  }
+
+  .team-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #eee;
+  }
+
+  .not-home .dropdown-content {
+    border-top: 1px solid #ddd;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .dropdown-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

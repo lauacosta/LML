@@ -13,6 +13,7 @@ const posts = (await getCollection("desafios")).sort(
   title="LML Gestión"
   description="LML Gestión es un equipo de trabajo conformado por Lautaro Acosta, Lautaro Faccini, Felipe Fidanza, Tobias Stegmayer y Moselli Yamil; alumnos de la catedra de Gestión Gerencial. Este portfolio tiene como objetivo presentar las actividades realizadas en el cursado de la materia.">
   <main>
+    <div></div>
     <section class="hero-section">
       <div class="hero-wrapper">
         <h1>lml gestión</h1>
@@ -25,7 +26,7 @@ const posts = (await getCollection("desafios")).sort(
 
     <section>
       <div class="index-wrapper">
-        <h2>Nuestro equipo</h2>
+        <h2 id="equipo">Nuestro equipo</h2>
         <TeamPresentation
           nombre="Lautaro Acosta Quintana"
           linkedin="https://www.linkedin.com/in/lautaro-acosta-quintana/"
@@ -104,8 +105,14 @@ const posts = (await getCollection("desafios")).sort(
   .hero-section {
     height: 100dvh;
     width: 100%;
-    background-color: #070707;
-    /* background-image: url("../assets/lospibe.png"); */
+    background-color: #43859c;
+
+    background-image: radial-gradient(
+      circle,
+      rgba(67, 133, 156, 1) 12%,
+      rgba(11, 82, 112, 1) 63%,
+      rgba(0, 40, 66, 1) 100%
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -141,7 +148,7 @@ const posts = (await getCollection("desafios")).sort(
       gap: 1rem;
 
       p {
-        color: var(--text-200);
+        color: #e7e7e7;
         margin: 0;
       }
     }
