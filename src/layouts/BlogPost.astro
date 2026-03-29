@@ -1,7 +1,13 @@
 ---
 import Layout from "./Layout.astro"; // Importas el layout padre
-import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
+
+import { Image } from "astro:assets";
+import imgLautaroA from "../assets/equipo/lauti-a.webp";
+import imgLautaroF from "../assets/equipo/lauti-f.webp";
+import imgFelipe from "../assets/equipo/felipe.webp";
+import imgYamil from "../assets/equipo/yamil.webp";
+import imgTobias from "../assets/equipo/tobias.webp";
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
@@ -36,6 +42,49 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
           </div>
           <h1>{title}</h1>
+          <div class="autores">
+            <a href="/equipo/lautaro-acosta">
+              <Image
+                src={imgLautaroA}
+                alt="Lautaro Acosta Quintana"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/lautaro-faccini">
+              <Image
+                src={imgLautaroF}
+                alt="Lautaro Faccini"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/felipe-fidanza">
+              <Image
+                src={imgFelipe}
+                alt="Felipe Fidanza"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/tobias-stegmayer">
+              <Image
+                src={imgTobias}
+                alt="Tobías Stegmayer"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/yamil-moselli">
+              <Image
+                src={imgYamil}
+                alt="Yamil Moselli"
+                width={45}
+                height={45}
+              /></a
+            >
+          </div>
+
           <hr />
         </div>
         <slot />
@@ -80,5 +129,25 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   }
   .last-updated-on {
     font-style: italic;
+  }
+  .autores img {
+    transition: all 0.2s ease;
+  }
+  .autores img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  .autores:hover img {
+    transform: scale(0.9);
+    opacity: 0.7;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .autores:hover img:hover {
+    transform: scale(1.1);
+    opacity: 1;
   }
 </style>

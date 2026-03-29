@@ -13,7 +13,6 @@ const posts = (await getCollection("desafios")).sort(
   title="LML Gestión"
   description="LML Gestión es un equipo de trabajo conformado por Lautaro Acosta, Lautaro Faccini, Felipe Fidanza, Tobias Stegmayer y Moselli Yamil; alumnos de la catedra de Gestión Gerencial. Este portfolio tiene como objetivo presentar las actividades realizadas en el cursado de la materia.">
   <main>
-    <div></div>
     <section class="hero-section">
       <div class="hero-wrapper">
         <h1>lml gestión</h1>
@@ -121,6 +120,10 @@ const posts = (await getCollection("desafios")).sort(
     flex-direction: column;
     justify-content: end;
     align-items: center;
+
+    h1 {
+      font-family: "Epoch", "Sans Serif";
+    }
   }
 
   .hero-wrapper {

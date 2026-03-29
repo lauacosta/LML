@@ -67,7 +67,6 @@ h6 {
 }
 h1 {
   font-size: 3.052em;
-  font-family: "Epoch", "Sans Serif";
 }
 h2 {
   font-size: 2.441em;
@@ -168,11 +167,20 @@ a {
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
-  padding-block: 8rem;
+  padding-block: 9rem;
 
   h2 {
     font-size: 8rem;
   }
+}
+
+.blog-wrapper {
+  --max-width: 800px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+  padding-block: 4rem;
 }
 
 .index-wrapper > article {

@@ -1,0 +1,103 @@
+---
+import Layout from "./Layout.astro"; // Importas el layout padre
+import FormattedDate from "../components/FormattedDate.astro";
+
+const { nombre, description, pubDate, updatedDate, heroVideo } = Astro.props;
+---
+
+<Layout title={nombre} description={description}>
+  <main>
+    <article>
+      <div class="hero-image">
+        <div class="video-container">
+          <iframe
+            id={`video-${nombre.replace(/\s+/g, "")}`}
+            src={heroVideo}
+            title={`Video de ${nombre}`}
+            frameborder="0"
+            loading="lazy"
+            fetchpriority="low"
+            allow="autoplay; encrypted-media"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="prose">
+        <div class="title">
+          <div class="date">
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
+              )
+            }
+          </div>
+          <h1>{nombre}</h1>
+
+          <hr />
+        </div>
+        <slot />
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-top: 88px;
+    padding-top: 4rem;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+  .prose {
+    width: 720px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 1em;
+    color: rgb(var(--gray-dark));
+  }
+  .title {
+    margin-bottom: 1em;
+    padding: 1em 0;
+    text-align: center;
+    line-height: 1;
+  }
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+  .date {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+  .last-updated-on {
+    font-style: italic;
+  }
+  .autores img {
+    transition: all 0.2s ease;
+  }
+  .autores img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  .autores:hover img {
+    transform: scale(0.9);
+    opacity: 0.7;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .autores:hover img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getYouTubeEmbedUrl } from "../../utils/youtube";
+
+const nombre = "Lautaro Faccini";
+const linkVideo = "https://youtu.be/lEB0HQHBKn4";
+
+const embedUrl = getYouTubeEmbedUrl(linkVideo);
+---
+
+<Layout
+  title=`Perfil de ${nombre}`
+  description="Tobias Stegmayer, actualmente (2025) estudiante del último año de  ingenieria en sistemas, programador y artista.">
+  <main>
+    <section>
+      <div class="video-container">
+        <iframe
+          id={`video-${nombre.replace(/\s+/g, "")}`}
+          src={embedUrl}
+          title={`Video de ${nombre}`}
+          frameborder="0"
+          loading="lazy"
+          fetchpriority="low"
+          allow="autoplay; encrypted-media"
+          allowfullscreen></iframe>
+      </div>
+      <div class="blog-wrapper">
+        <h1>{nombre}</h1>
+        <p>
+          Holaaal Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Impedit eos a in aspernatur assumenda hic, sapiente et reiciendis
+          repellat quia eveniet nostrum incidunt nobis atque similique facere.
+          Earum, aliquam facere.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .video-container {
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #000;
+
+    margin-top: 9rem;
+
+    --max-width: 1020px;
+    --padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+</style>

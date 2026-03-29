@@ -33,9 +33,7 @@ const { isNotHome } = Astro.props;
     <div class="internal-links">
       <HeaderLink href="/">Inicio</HeaderLink>
       <div class="dropdown">
-        <HeaderLink href="#equipo" class="dropdown-trigger">
-          Equipo
-        </HeaderLink>
+        <HeaderLink href="" class="dropdown-trigger"> Equipo </HeaderLink>
 
         <div class="dropdown-content">
           <div class="dropdown-grid">
@@ -161,7 +159,8 @@ const { isNotHome } = Astro.props;
     width: min(var(--max-width), 100% - (var(--padding) * 2));
     margin-inline: auto;
   }
-  nav a {
+  nav a,
+  nav span {
     color: var(--text-200);
     text-decoration: none;
     padding-block: 1.5rem;
@@ -183,7 +182,8 @@ const { isNotHome } = Astro.props;
 
   .not-home {
     background-color: #fff;
-    .internal-links a {
+    .internal-links a,
+    .internal-links span {
       color: rgb(var(--gray));
     }
 

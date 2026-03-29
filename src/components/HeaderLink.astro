@@ -6,19 +6,35 @@ type Props = HTMLAttributes<"a">;
 const { href, class: className, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
+const isActive =
+  href && (href === pathname || href === "/" + (subpath?.[0] || ""));
+const hasHref = Boolean(href);
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
-  <slot />
-</a>
+{
+  hasHref ? (
+    <a href={href} class:list={[className, { active: isActive }]} {...props}>
+      <slot />
+    </a>
+  ) : (
+    <span class:list={[className, "no-link"]} {...props}>
+      <slot />
+    </span>
+  )
+}
 <style>
-  a {
+  a,
+  .no-link {
     display: inline-block;
     text-decoration: none;
   }
+
   a.active {
-    /* font-weight: bolder; */
     text-decoration: underline;
+  }
+
+  /* Forzamos el cursor default cuando no hay link */
+  .no-link {
+    cursor: default;
   }
 </style>
