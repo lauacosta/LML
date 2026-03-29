@@ -14,18 +14,18 @@ const desafios = defineCollection({
     }),
 });
 
-const blogsPersonales = defineCollection({
-  loader: glob({
-    base: "./src/content/blogsPersonales",
-    pattern: "**/*.{md,mdx}",
-  }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      description: z.string(),
-      pubDate: z.coerce.date(),
-      heroImage: z.optional(image()),
-    }),
-});
+// const blogsPersonales = defineCollection({
+//   loader: glob({
+//     base: "./src/content/blogsPersonales",
+//     pattern: "**/*.{md,mdx}",
+//   }),
+//   schema: ({ image }) =>
+//     z.object({
+//       title: z.string(),
+//       description: z.string(),
+//       pubDate: z.coerce.date(),
+//       heroImage: z.optional(image()),
+//     }),
+// });
 
-export const collections = { desafios, blogsPersonales };
+export const collections = { desafios };

@@ -1,9 +1,17 @@
-export const getYouTubeEmbedUrl = (url: string): string | null => {
-  if (!url) return null;
+// src/utils/youtube.ts
+export const getYouTubeEmbedUrl = (
+  url: string | undefined | null,
+): string | null => {
+  // 1. Verificación de seguridad inmediata
+  if (!url || typeof url !== "string") return null;
 
   try {
     const parsedUrl = new URL(url);
-    const host = parsedUrl.hostname.replace(/^www\./, "");
+
+    // Verificamos que hostname exista antes de hacer el replace
+    const hostname = parsedUrl.hostname || "";
+    const host = hostname.replace(/^www\./, "");
+
     let videoId: string | null = null;
 
     if (host === "youtu.be") {
@@ -23,12 +31,13 @@ export const getYouTubeEmbedUrl = (url: string): string | null => {
     }
 
     return `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1`;
-  } catch {
+  } catch (e) {
     return fallbackRegex(url);
   }
 };
 
 function fallbackRegex(url: string): string | null {
+  if (!url) return null;
   const regExp =
     /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|shorts\/|watch\?v=|\&v=)([^#\&\?]*).*/;
   const match = url.match(regExp);
