@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+import FormattedDate from "../../components/FormattedDate.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const mapas = (await getCollection("mapas")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout
+  title="Mapas Conceptuales | Gestión Gerencial"
+  description="Mapas conceptuales desarrollados por LML Gestión | Gestión Gerencial">
+  <main>
+    <section>
+      <div class="index-wrapper">
+        <h1 id="mapas">Mapas</h1>
+        <div class="desafios-grid">
+          {
+            mapas.map((mapa) => (
+              <a href={`/mapas/${mapa.id}/`} class="desafio-card">
+                <article>
+                  <div class="card-image-wrapper">
+                    {mapa.data.heroImage && (
+                      <Image
+                        src={mapa.data.heroImage}
+                        alt={mapa.data.title}
+                        width={720}
+                        height={400}
+                        loading="lazy"
+                        transition:name={`image-${mapa.data.title}`}
+                      />
+                    )}
+                  </div>
+                  <div class="card-content">
+                    <p class="card-date">
+                      <FormattedDate date={mapa.data.pubDate} />
+                    </p>
+                    <h3>{mapa.data.title}</h3>
+                    {mapa.data.description && (
+                      <p class="card-description">{mapa.data.description}</p>
+                    )}
+                    <span class="view-more">Ver mapa →</span>
+                  </div>
+                </article>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .card-description {
+    font-size: 1rem;
+    color: rgb(var(--gray));
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+</style>

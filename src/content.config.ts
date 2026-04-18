@@ -28,4 +28,15 @@ const desafios = defineCollection({
 //     }),
 // });
 
-export const collections = { desafios };
+const mapas = defineCollection({
+  loader: glob({ base: "./src/content/mapas", pattern: "**/*.{md,mdx}" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      pubDate: z.coerce.date(),
+      heroImage: image(),
+    }),
+});
+
+export const collections = { desafios, mapas };

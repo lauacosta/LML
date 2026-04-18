@@ -1,0 +1,93 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const mapas = await getCollection("mapas");
+  return mapas.map((mapa) => ({
+    params: { slug: mapa.id },
+    props: mapa,
+  }));
+}
+
+type Props = CollectionEntry<"mapas">;
+
+const mapa = Astro.props;
+---
+
+<Layout title={mapa.data.title} description={mapa.data.description ?? mapa.data.title}>
+  <main>
+    <div class="mapa-wrapper">
+      <div class="mapa-header">
+        <p class="mapa-date"><FormattedDate date={mapa.data.pubDate} /></p>
+        <h1>{mapa.data.title}</h1>
+        {mapa.data.description && <p class="mapa-description">{mapa.data.description}</p>}
+      </div>
+      <div class="mapa-image-full">
+        <Image
+          src={mapa.data.heroImage}
+          alt={mapa.data.title}
+          width={1400}
+          height={900}
+          loading="eager"
+          transition:name={`image-${mapa.data.title}`}
+        />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-top: 88px;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .mapa-wrapper {
+    --max-width: 1200px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+  }
+
+  .mapa-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .mapa-date {
+    color: rgb(var(--gray));
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  .mapa-header h1 {
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .mapa-description {
+    color: rgb(var(--gray));
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .mapa-image-full {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+
+  .mapa-image-full img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+  }
+</style>
