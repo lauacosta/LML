@@ -9,17 +9,41 @@ import imgFelipe from "../assets/equipo/felipe.webp";
 import imgYamil from "../assets/equipo/yamil.webp";
 import imgTobias from "../assets/equipo/tobias.webp";
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: any;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel = "Actividades" } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
   <main>
-    <a href="/actividades" class="back-btn" aria-label="Volver a Actividades">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
-      </svg>
-      <span>Actividades</span>
-    </a>
+    {backHref && (
+      <>
+        <a href={backHref} class="back-btn" aria-label={`Volver a ${backLabel}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+          <span>{backLabel}</span>
+        </a>
+        <a href={backHref} class="side-zone side-left" aria-label={`Volver a ${backLabel}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </a>
+        <a href={backHref} class="side-zone side-right" aria-label={`Volver a ${backLabel}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </a>
+      </>
+    )}
     <article>
       <div class="hero-image">
         {
@@ -137,6 +161,44 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     }
     .back-btn:hover {
       transform: translateX(-3px);
+    }
+  }
+
+  .side-zone {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: clamp(40px, 8vw, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: transparent;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+  }
+
+  .side-left {
+    left: 0;
+  }
+
+  .side-right {
+    right: 0;
+  }
+
+  .side-zone:hover {
+    color: rgb(var(--gray));
+    background: linear-gradient(to right, rgba(0,0,0,0.04), transparent);
+  }
+
+  .side-right:hover {
+    background: linear-gradient(to left, rgba(0,0,0,0.04), transparent);
+  }
+
+  @media (max-width: 900px) {
+    .side-zone {
+      display: none;
     }
   }
 
