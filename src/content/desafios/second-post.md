@@ -1,16 +1,124 @@
 ---
-title: "Desafío generico de prueba 2"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2023"
+title: "Actividad de Investigación Teórica - La Gerencia"
+description: "La Gerencia"
+pubDate: "Apr 20 2026"
 heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+## Tabla de contenidos
+- [1. Tres habilidades para el desempeño administrativo exitoso](#tres-habilidades-para-el-desempeño-administrativo-exitoso)
+  - [Relación con la pirámide organizacional](#relación-con-la-pirámide-organizacional)
+  - [¿Cuál es la más importante?](#cuál-es-la-más-importante)
+- [2. Diez papeles del administrador](#diez-papeles-del-administrador)
+- [Reflexiones](#reflexiones)
+  - [Lautaro Acosta](#lautaro-acosta)
+  - [Lautaro Faccini](#lautaro-faccini)
+  - [Felipe Fidanza](#felipe-fidanza)
+  - [Yamil Moselli](#yamil-moselli)
+  - [Tobías Stegmayer](#tobías-stegmayer)
+---
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+La administración no es otra cosa que la dirección racional de las actividades de una organización, con o sin fines de lucro. Ella implica planeación, organización (estructura), dirección y control de las actividades realizadas en una organización, diferenciadas por la división del trabajo. Por tanto, la administración es imprescindible para la existencia, la supervivencia y el éxito de las organizaciones.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+El éxito de un administrador depende más de su desempeño y de cómo trata a las personas y las situaciones, según sus características de personalidad; depende de lo que el administrador logra y no de lo que es. Este desempeño es el resultado de las habilidades que el administrador tiene y utiliza. Una habilidad es la capacidad de transformar conocimiento en acción, que resulta en un desempeño esperado.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+---
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## Tres habilidades para el desempeño administrativo exitoso
+*Según Katz, existen tres habilidades importantes para el desempeño administrativo exitoso: técnica, humana y conceptual. ¿En qué consiste las habilidades técnicas, humanas y conceptuales? ¿Cómo se relacionan las habilidades mencionadas con la pirámide organizacional? Estas habilidades, ¿qué otras competencias personales exigen? Describir cada una de ellas. ¿Por qué es importante que un gerente tenga estas competencias? ¿Cuál de estas tres competencias considera que es la más importante?*
+
+Según Katz, todo gerente necesita tres habilidades básicas para desempeñarse con éxito: técnica, humana y conceptual. Lo define de la siguiente manera:
+
+- **Habilidad técnica:** es la destreza para usar procedimientos, técnicas y conocimientos propios de un campo especializado. Por ejemplo, cirujanos, ingenieros, músicos o contadores poseen habilidades técnicas en sus respectivos campos. En una organización, supone dominar las herramientas, métodos y procedimientos específicos del área en que se trabaja (producción, contabilidad, informática, etc.).
+
+- **Habilidad humana:** es la capacidad para trabajar con otras personas, entenderlas y motivarlas, ya sea en lo individual o en grupo. Implica saber comunicar, escuchar, liderar, resolver conflictos y generar un clima de cooperación. Es la habilidad para que los miembros de la organización trabajen juntos y comprometidos.
+
+- **Habilidad conceptual:** es la pericia para coordinar e integrar todas las actividades e intereses de una organización. Supone ver a la empresa como un todo, comprender cómo sus partes dependen unas de otras, anticipar cómo un cambio en una parte afectará al conjunto y relacionar la organización con su entorno (industria, comunidad, fuerzas políticas, sociales y económicas).
+
+### Relación con la pirámide organizacional
+
+Si bien las tres habilidades son esenciales para cualquier gerente, su importancia relativa varía según el nivel jerárquico:
+
+- En la **gerencia de primera línea** (supervisores, jefes de sección) predomina la habilidad técnica, porque están en contacto directo con operarios y con los procesos específicos del trabajo.
+- En la **gerencia media** (jefes de departamento, gerentes de área) la habilidad más relevante es la humanista, ya que su rol central consiste en articular a subordinados y superiores, coordinar equipos y traducir las políticas de la alta gerencia en acción operativa.
+- En la **alta gerencia** (directores, ejecutivos máximos) prevalece la habilidad conceptual, porque deben trazar estrategias, entender la organización como un todo y su relación con el entorno.
+
+De las tres habilidades básicas habladas, se desprenden otras competencias personales necesarias que todo gerente eficaz debería poseer, entre ellas:
+
+- *Comunicación efectiva,* tanto oral como escrita, para transmitir ideas con claridad a colaboradores, pares y superiores.
+- *Liderazgo,* entendido como la capacidad de influir, orientar y motivar a otros hacia el logro de objetivos.
+- *Toma de decisiones,* para elegir cursos de acción con información incompleta y bajo presión de tiempo.
+- *Pensamiento estratégico y visión sistémica,* vinculados a la habilidad conceptual, que permiten anticipar escenarios y comprender relaciones complejas.
+- *Trabajo en equipo y manejo de relaciones interpersonales,* para construir redes de cooperación.
+- *Adaptabilidad y apertura al cambio,* ya que los gerentes deben responder a un entorno dinámico.
+- *Ética y responsabilidad,* para actuar con integridad frente a empleados, accionistas, clientes y comunidad.
+- *Capacidad de negociación y manejo de conflictos,* necesaria en cualquier nivel de la organización.
+
+Para un gerente, estas habilidades/competencias son importantes porque su desempeño depende más de lo que logra que de lo que es, y ese logro solo se alcanza transformando conocimiento en acción mediante habilidades. Sin la técnica no podría entender ni supervisar el trabajo; sin la humanista no podría coordinar a las personas que ejecutan ese trabajo; y sin la conceptual no podría dar rumbo ni integrar a la organización en su entorno. Un gerente que carezca de alguna de ellas compromete la eficiencia, la eficacia y, en definitiva, la supervivencia de la organización.
+
+### ¿Cuál es la más importante?
+
+Consideramos que depende del nivel estratégico al cual nos referimos, como hablamos anteriormente, cada nivel se corresponde mejor con una de las competencias, pues es esta la que desarrollan en el día a día. Por ello, la más importante dentro de cada nivel estratégico es la habilidad que mejor se adapta para la tarea que realizan. Esto es, la más importante para los niveles operativos son las competencias técnicas, la más importante para la gerencia media es la humana, y la más importante para la alta gerencia es la conceptual.
+
+Ahora bien, desde el punto de vista del éxito global de la organización la habilidad conceptual tiende a considerarse la más importante, porque es la que permite al gerente comprender la organización como un sistema, tomar decisiones estratégicas y adaptarla a un entorno cambiante. Un error técnico puede corregirse; un error conceptual (por ejemplo una mala lectura del mercado, una estrategia equivocada) puede comprometer la existencia misma de la empresa.
+
+---
+
+## Diez papeles del administrador
+*Mintzberg prefiere identificar diez papeles específicos del administrador, distribuidos en tres categorías: interpersonal, informativa y decisoria. ¿En qué consiste cada una de ellas?*
+
+Como dice Chiavenato en su libro, Henry Mintzberg, a partir de estudios empíricos sobre el trabajo real de los gerentes, sostuvo que más que planear, organizar, dirigir y controlar de manera lineal, los administradores desempeñan un conjunto de diez papeles o roles específicos, agrupados en tres categorías: interpersonal, informativa y decisoria.
+
+---
+1. Categoría interpersonal 
+---
+Reúne los roles que surgen de la autoridad formal del cargo y que tienen que ver con las relaciones con las personas dentro y fuera de la organización. Comprende tres papeles:
+- *Representación (cabeza visible o figura de autoridad):* el administrador actúa como símbolo de la organización, cumpliendo deberes ceremoniales y protocolares, como recibir visitantes, firmar documentos, participar en actos oficiales o representar a la empresa en eventos.
+
+- *Liderazgo:* es responsable de dirigir, motivar, capacitar y coordinar a sus subordinados, integrando sus necesidades con los objetivos de la organización y creando un ambiente propicio para el buen desempeño.
+
+- *Vinculación (enlace):* mantiene una red de contactos e información con personas y grupos externos a su unidad (colegas, clientes, proveedores, funcionarios), sirviendo de puente entre la organización y su entorno.
+
+---
+2. Categoría informativa
+---
+Agrupa los roles relacionados con recibir, procesar y transmitir información. Chiavenato destaca que el administrador es el "centro nervioso" de información de su unidad. Incluye tres papeles:
+- *Monitoreo (supervisión o seguimiento):* el administrador busca y recibe información interna y externa para comprender a fondo la organización y su entorno; revisa reportes, mantiene contactos, lee publicaciones, detecta oportunidades y problemas.
+
+- *Diseminación (difusión):* transmite hacia adentro de la organización la información relevante que ha recibido desde el exterior o desde otros miembros, para que los subordinados puedan tomar mejores decisiones.
+
+- *Portavoz (vocero):* comunica información de la organización hacia afuera, a accionistas, clientes, proveedores, autoridades, medios o la sociedad en general; es el representante oficial en materia de información.
+
+---
+3. Categoría decisoria (toma de decisiones)
+---
+Comprende los roles en los que el administrador utiliza la información disponible para decidir. Son cuatro papeles:
+a. *Emprendedor:* busca oportunidades de mejora e inicia proyectos de cambio, innovación o adaptación, promoviendo el desarrollo y crecimiento de la organización.
+
+b. *Manejo de disturbios (solucionador de conflictos):* actúa cuando surgen crisis, conflictos o situaciones imprevistas, tomando decisiones correctivas para restablecer el equilibrio.
+
+c. *Asignación de recursos:* distribuye los recursos de la organización (por ejemplo tiempo, dinero, personal, equipos, autoridad) estableciendo prioridades y autorizando decisiones importantes de su unidad.
+
+d. *Negociación:* representa a la organización en negociaciones con otros actores (sindicatos, proveedores, clientes, socios, gobierno), buscando acuerdos favorables para la empresa.
+
+---
+## Reflexiones
+#### Lautaro Acosta
+---
+*""*
+
+#### Lautaro Faccini
+---
+*""*
+
+#### Felipe Fidanza
+---
+*"Esta considero que fue una actividad útil para recordar algunos conceptos que lo venimos viendo a lo largo de la carrera, y asentarlos al relacionarlos entre sí, como es el caso de los niveles estratégicos en una organización, junto con las tres habilidades para el desempeño administrativo exitoso. Además es necesario desarrollar las competencias que se destacan en el punto 1, para estar capacitado en un futuro, a tomar el cargo de gerente."*
+
+#### Yamil Moselli 
+---
+*""*
+
+#### Tobías Stegmayer
+---
+*""*

@@ -12,16 +12,16 @@ const posts = (await getCollection("desafios")).sort(
 ---
 
 <Layout
-  title="Desafíos de Gestión Gerencial"
-  description="Desafíos desarrollados por LPM Gestión | Gestión Gerencial">
+  title="Actividades de Gestión Gerencial"
+  description="Actividades desarrolladas por LML Gestión | Gestión Gerencial">
   <main>
     <section>
       <div class="index-wrapper">
-        <h1 id="desafios">Desafíos</h1>
+        <h1 id="actividades">Actividades</h1>
         <div class="desafios-grid">
           {
             posts.map((post) => (
-              <a href={`/desafios/${post.id}/`} class="desafio-card">
+              <a href={`/actividades/${post.id}/`} class="desafio-card">
                 <article>
                   <div class="card-image-wrapper">
                     {post.data.heroImage && (
@@ -40,7 +40,7 @@ const posts = (await getCollection("desafios")).sort(
                       <FormattedDate date={post.data.pubDate} />
                     </p>
                     <h3>{post.data.title}</h3>
-                    <span class="view-more">Leer desafío →</span>
+                    <span class="view-more">Ver actividad →</span>
                   </div>
                 </article>
               </a>
