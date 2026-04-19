@@ -19,48 +19,46 @@ interface Props {
   backLabel?: string;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel = "Actividades" } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  backHref,
+  backLabel = "Actividades",
+} = Astro.props;
 ---
 
 <Layout title={title} description={description}>
   <main>
-    {backHref && (
-      <>
-        <a href={backHref} class="back-btn" aria-label={`Volver a ${backLabel}`}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 5l-7 7 7 7"/>
-          </svg>
-          <span>{backLabel}</span>
-        </a>
-        <a href={backHref} class="side-zone side-left" aria-label={`Volver a ${backLabel}`}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </a>
-        <a href={backHref} class="side-zone side-right" aria-label={`Volver a ${backLabel}`}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </a>
-      </>
-    )}
     <article>
-      <div class="hero-image">
-        {
-          heroImage && (
-            <Image
-              width={1020}
-              height={510}
-              src={heroImage}
-              alt={title}
-              loading="eager"
-              transition:name={`image-${title}`}
-            />
-          )
-        }
-      </div>
       <div class="prose">
         <div class="title">
+          {
+            backHref && (
+              <>
+                <a
+                  href={backHref}
+                  class="back-btn"
+                  aria-label={`Volver a ${backLabel}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M19 12H5M12 5l-7 7 7 7" />
+                  </svg>
+                  <span>{backLabel}</span>
+                </a>
+              </>
+            )
+          }
           <div class="date">
             <FormattedDate date={pubDate} />
             {
@@ -117,6 +115,23 @@ const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel
 
           <hr />
         </div>
+      </div>
+
+      <div class="hero-image">
+        {
+          heroImage && (
+            <Image
+              width={1020}
+              height={510}
+              src={heroImage}
+              alt={title}
+              loading="eager"
+              transition:name={`image-${title}`}
+            />
+          )
+        }
+      </div>
+      <div class="prose">
         <slot />
       </div>
     </article>
@@ -125,33 +140,21 @@ const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel
 
 <style>
   .back-btn {
-    position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-580px);
-    z-index: 20;
     display: flex;
+    width: fit-content;
+    margin-bottom: 2rem;
     align-items: center;
     gap: 0.4rem;
+    padding-block: 0.5rem;
     color: rgb(var(--gray-dark)) !important;
     font-size: 0.9rem;
-    text-decoration: none !important;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 999px;
-    padding: 0.4rem 1rem 0.4rem 0.75rem;
-    transition:
-      color 0.2s ease,
-      box-shadow 0.2s ease,
-      transform 0.2s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.2s ease;
   }
 
   .back-btn:hover {
     color: rgb(var(--black)) !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-    transform: translateX(calc(-580px - 3px));
+    text-decoration: underline;
   }
 
   @media (max-width: 1200px) {
@@ -162,38 +165,6 @@ const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel
     .back-btn:hover {
       transform: translateX(-3px);
     }
-  }
-
-  .side-zone {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: clamp(40px, 8vw, 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    color: transparent;
-    text-decoration: none;
-    transition: color 0.2s ease, background 0.2s ease;
-    cursor: pointer;
-  }
-
-  .side-left {
-    left: 0;
-  }
-
-  .side-right {
-    right: 0;
-  }
-
-  .side-zone:hover {
-    color: rgb(var(--gray));
-    background: linear-gradient(to right, rgba(0,0,0,0.04), transparent);
-  }
-
-  .side-right:hover {
-    background: linear-gradient(to left, rgba(0,0,0,0.04), transparent);
   }
 
   @media (max-width: 900px) {
@@ -208,6 +179,7 @@ const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel
   }
   .hero-image {
     width: 100%;
+    margin-bottom: 4rem;
   }
   .hero-image img {
     display: block;
@@ -219,12 +191,10 @@ const { title, description, pubDate, updatedDate, heroImage, backHref, backLabel
     width: 720px;
     max-width: calc(100% - 2em);
     margin: auto;
-    padding: 1em;
+    padding: 0 1em 1em 1em;
     color: rgb(var(--gray-dark));
   }
   .title {
-    margin-bottom: 1em;
-    padding: 1em 0;
     text-align: center;
     line-height: 1;
   }

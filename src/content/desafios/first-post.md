@@ -1,15 +1,18 @@
 ---
 title: "Portfolio (Micrositio)"
 description: "Reflexión personal sobre el desarrollo del micrositio"
-pubDate: "Apr 03 2026"
-heroImage: "../../assets/blog-placeholder-3.jpg"
+pubDate: 2026-04-6
+heroImage: "../../assets/development.avif"
 ---
-## CONSIGNA
+
+## Consigna
+
 ---
+
 Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendizaje del equipo a lo largo de la asignatura, integrando producciones, reflexiones y evolución profesional en clave de Ingeniería en Sistemas de Información.
 
-
 ## Tabla de contenidos
+
 - [Reflexiones](#reflexiones)
   - [Lautaro Acosta](#lautaro-acosta)
   - [Lautaro Faccini](#lautaro-faccini)
@@ -17,26 +20,36 @@ Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendiz
   - [Yamil Moselli](#yamil-moselli)
   - [Tobías Stegmayer](#tobías-stegmayer)
 
-
-
 ## Reflexiones
+
 ---
+
 #### Lautaro Acosta
+
 ---
-*""*
+
+_""_
 
 #### Lautaro Faccini
+
 ---
-*""*
+
+_""_
 
 #### Felipe Fidanza
----
-*"Creo que el micrositio es una actividad interesante para que quede evidenciado todo el trabajo del equipo en un solo lugar. Además es una buena forma de dar a conocer el aprendizaje a lo largo de la cursada utilizando herramientas que, como Ingenieros en sistemas, debemos conocer."*
 
-#### Yamil Moselli 
 ---
-*""*
+
+_"Creo que el micrositio es una actividad interesante para que quede evidenciado todo el trabajo del equipo en un solo lugar. Además es una buena forma de dar a conocer el aprendizaje a lo largo de la cursada utilizando herramientas que, como Ingenieros en sistemas, debemos conocer."_
+
+#### Yamil Moselli
+
+---
+
+_""_
 
 #### Tobías Stegmayer
+
 ---
-*""*
+
+_"Me gusta el hecho de hacer un seguimiento constante de nuestro progreso, reflexionando sobre las actividades y, por sobre todo, dar a conocer nuestro desempeño a personas externas."_

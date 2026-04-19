@@ -3,7 +3,6 @@
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
-import sharp from "sharp";
 
 // https://astro.build/config
 export default defineConfig({

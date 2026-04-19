@@ -72,6 +72,7 @@ const posts = (await getCollection("desafios")).sort(
                         widths={[320, 640, 720]}
                         sizes="(max-width: 640px) 320px, (max-width: 900px) 640px, 720px"
                         loading="lazy"
+                        transition:name={`image-${post.data.title}`}
                       />
                     )}
                   </div>
