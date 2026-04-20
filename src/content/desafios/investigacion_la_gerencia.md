@@ -118,9 +118,9 @@ d. _Negociación:_ representa a la organización en negociaciones con otros acto
 
 ---
 
-> _"Algo que me dejó pensando esta actividad es que muchas veces se idealiza el rol del gerente como alguien que tiene todo bajo control, cuando en realidad su trabajo parece estar lleno de incertidumbre y decisiones incompletas. Me resulta interesante cómo Mintzberg muestra que el administrador no trabaja de forma ordenada como dicen los libros, sino que está constantemente saltando entre problemas, personas e información.
+> _"Algo que me dejó pensando esta actividad es que muchas veces se idealiza el rol del gerente como alguien que tiene todo bajo control, cuando en realidad su trabajo parece estar lleno de incertidumbre y decisiones incompletas. Me resulta interesante cómo Mintzberg muestra que el administrador no trabaja de forma ordenada como dicen los libros, sino que está constantemente saltando entre problemas, personas e información."_
 
-En ese sentido, ser buen gerente no es dominar una sola habilidad, sino saber equilibrarlas en contextos cambiantes. Creo que ahí está la verdadera dificultad: no en aprender cada competencia por separado, sino en saber cuándo usar cada una"_
+> _"En ese sentido, ser buen gerente no es dominar una sola habilidad, sino saber equilibrarlas en contextos cambiantes. Creo que ahí está la verdadera dificultad: no en aprender cada competencia por separado, sino en saber cuándo usar cada una"_
 
 #### Felipe Fidanza
 
