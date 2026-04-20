@@ -1,0 +1,385 @@
+---
+import Layout from "./Layout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+import { Image } from "astro:assets";
+import imgLautaroA from "../assets/equipo/lauti-a.webp";
+import imgLautaroF from "../assets/equipo/lauti-f.webp";
+import imgFelipe from "../assets/equipo/felipe.webp";
+import imgYamil from "../assets/equipo/yamil.webp";
+import imgTobias from "../assets/equipo/tobias.webp";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  heroImage?: any;
+  backHref?: string;
+  backLabel?: string;
+  headings?: { depth: number; slug: string; text: string }[];
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  backHref,
+  backLabel = "inicio",
+  headings = [],
+} = Astro.props;
+
+const tocHeadings = headings.filter(
+  (h) =>
+    h.depth >= 2 &&
+    h.depth <= 3 &&
+    h.text.toLowerCase() !== "tabla de contenidos",
+);
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <article>
+      <div class="back-container">
+        <div class="back-btn-container">
+          {
+            backHref && (
+              <a
+                href={backHref}
+                class="back-btn"
+                aria-label={`Volver al ${backLabel}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M19 12H5M12 5l-7 7 7 7" />
+                </svg>
+                <span>{backLabel}</span>
+              </a>
+            )
+          }
+        </div>
+      </div>
+
+      <div class="prose">
+        <div class="title">
+          <div class="date">
+            <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <div class="last-updated-on">
+                  Last updated on <FormattedDate date={updatedDate} />
+                </div>
+              )
+            }
+          </div>
+          <h1>{title}</h1>
+          <div class="autores">
+            <a href="/equipo/lautaro-acosta">
+              <Image
+                src={imgLautaroA}
+                alt="Lautaro Acosta Quintana"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/lautaro-faccini">
+              <Image
+                src={imgLautaroF}
+                alt="Lautaro Faccini"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/felipe-fidanza">
+              <Image
+                src={imgFelipe}
+                alt="Felipe Fidanza"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/tobias-stegmayer">
+              <Image
+                src={imgTobias}
+                alt="Tobías Stegmayer"
+                width={45}
+                height={45}
+              /></a
+            >
+            <a href="/equipo/yamil-moselli">
+              <Image
+                src={imgYamil}
+                alt="Yamil Moselli"
+                width={45}
+                height={45}
+              /></a
+            >
+          </div>
+          <hr />
+        </div>
+      </div>
+
+      <div class="hero-image">
+        {
+          heroImage && (
+            <Image
+              width={1020}
+              height={510}
+              src={heroImage}
+              alt={title}
+              loading="eager"
+              transition:name={`image-${title}`}
+            />
+          )
+        }
+      </div>
+
+      <div class="content-layout">
+        {
+          tocHeadings.length > 0 && (
+            <aside class="toc-sidebar">
+              <nav>
+                <ul>
+                  {tocHeadings.map((h) => (
+                    <li class:list={[{ "toc-h3": h.depth === 3 }]}>
+                      <a
+                        href={`#${h.slug}`}
+                        class="toc-link"
+                        data-heading={h.slug}>
+                        {h.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </aside>
+          )
+        }
+        <div class="prose">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const tocLinks = document.querySelectorAll<HTMLAnchorElement>(".toc-link");
+    if (!tocLinks.length) return;
+
+    const headingEls = document.querySelectorAll<HTMLElement>("h2, h3");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            tocLinks.forEach((l) => l.classList.remove("active"));
+            const active = document.querySelector(
+              `.toc-link[data-heading="${entry.target.id}"]`,
+            );
+            if (active) active.classList.add("active");
+          }
+        }
+      },
+      { rootMargin: "-15% 0% -75% 0%", threshold: 0 },
+    );
+
+    headingEls.forEach((h) => observer.observe(h));
+  });
+</script>
+
+<style>
+  main {
+    margin-top: 88px;
+    padding-top: 2rem;
+  }
+
+  .back-container {
+    width: 100%;
+  }
+  .back-btn-container {
+    --max-width: 1400px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin: 0 auto;
+  }
+
+  .back-btn {
+    display: flex;
+    width: fit-content;
+    margin-bottom: 2rem;
+    align-items: center;
+    gap: 0.4rem;
+    padding-block: 0.5rem;
+    color: rgb(var(--gray-dark)) !important;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+
+  .back-btn:hover {
+    color: rgb(var(--black)) !important;
+    text-decoration: underline;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .hero-image img {
+    display: block;
+    margin: 0 auto;
+    --max-width: 1400px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+  }
+
+  /* Layout con sidebar */
+  .content-layout {
+    --max-width: 1100px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding-bottom: 6rem;
+  }
+
+  /* Sin sidebar (trabajointegrador u otros) */
+  .content-layout:has(.prose:only-child) {
+    grid-template-columns: 1fr;
+    max-width: 740px;
+  }
+
+  /* Sidebar sticky */
+  .toc-sidebar {
+    position: sticky;
+    top: 7rem;
+  }
+
+  .toc-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid rgb(var(--gray-light));
+  }
+
+  .toc-sidebar nav ul li {
+    padding: 0;
+  }
+
+  .toc-h3 .toc-link {
+    padding-left: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 0.35rem 0 0.35rem 1rem;
+    font-size: 0.9rem;
+    color: rgb(var(--gray)) !important;
+    text-decoration: none !important;
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    line-height: 1.4;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .toc-link:hover {
+    color: rgb(var(--gray-dark)) !important;
+  }
+
+  .toc-link.active {
+    color: rgb(var(--black)) !important;
+    border-left-color: rgb(var(--black));
+    font-weight: 600;
+  }
+
+  /* Prose dentro del layout con sidebar no necesita centrarse */
+  .content-layout .prose {
+    min-width: 0;
+    padding: 0;
+    color: rgb(var(--gray-dark));
+  }
+
+  /* Prose standalone (título, hero) */
+  .prose {
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 0 1em 1em 1em;
+    color: rgb(var(--gray-dark));
+  }
+
+  .title {
+    text-align: center;
+    line-height: 1;
+    margin: 0 auto;
+    --max-width: 1100px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+  }
+
+  .title h1 {
+    margin: 0 0 0.5em 0;
+  }
+
+  .date {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+
+  .last-updated-on {
+    font-style: italic;
+  }
+
+  .autores img {
+    transition: all 0.2s ease;
+  }
+
+  .autores img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+  }
+
+  .autores:hover img {
+    transform: scale(0.9);
+    opacity: 0.7;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .autores:hover img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  /* Ocultar TOC en pantallas chicas */
+  @media (max-width: 1000px) {
+    .toc-sidebar {
+      display: none;
+    }
+
+    .content-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

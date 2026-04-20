@@ -2,7 +2,7 @@
 title: "Portfolio (Micrositio)"
 description: "Reflexión personal sobre el desarrollo del micrositio"
 pubDate: 2026-04-6
-heroImage: "../../assets/development.avif"
+heroImage: "../../assets/development.jpg"
 ---
 
 ## Consigna
@@ -10,7 +10,6 @@ heroImage: "../../assets/development.avif"
 ---
 
 Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendizaje del equipo a lo largo de la asignatura, integrando producciones, reflexiones y evolución profesional en clave de Ingeniería en Sistemas de Información.
-
 
 ## Reflexiones
 
