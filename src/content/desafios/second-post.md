@@ -129,7 +129,7 @@ d. _Negociación:_ representa a la organización en negociaciones con otros acto
 
 ---
 
-> _""_
+> _"Lo que más me llamó la atención es que ser un buen jefe no se trata solo de tener un título o saber mucho de un tema, sino de lo que uno logra en la práctica. Me hace pensar que, aunque al principio de la carrera es importante ser bueno en las tareas específicas (como usar un programa o hacer cuentas), a medida que uno crece, lo más importante es saber tratar con la gente y entender cómo funciona todo el negocio. Me queda claro que un error en la visión del negocio es mucho más grave que un error técnico, porque pone en riesgo a toda la empresa."_
 
 #### Tobías Stegmayer
 
