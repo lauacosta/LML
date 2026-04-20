@@ -5,20 +5,7 @@ pubDate: 2026-04-21
 heroImage: "../../assets/lagerencia.jpg"
 ---
 
-## Tabla de contenidos
 
-- [1. Tres habilidades para el desempeño administrativo exitoso](#tres-habilidades-para-el-desempeño-administrativo-exitoso)
-  - [Relación con la pirámide organizacional](#relación-con-la-pirámide-organizacional)
-  - [¿Cuál es la más importante?](#cuál-es-la-más-importante)
-- [2. Diez papeles del administrador](#diez-papeles-del-administrador)
-- [Reflexiones](#reflexiones)
-  - [Lautaro Acosta](#lautaro-acosta)
-  - [Lautaro Faccini](#lautaro-faccini)
-  - [Felipe Fidanza](#felipe-fidanza)
-  - [Yamil Moselli](#yamil-moselli)
-  - [Tobías Stegmayer](#tobías-stegmayer)
-
----
 
 La administración no es otra cosa que la dirección racional de las actividades de una organización, con o sin fines de lucro. Ella implica planeación, organización (estructura), dirección y control de las actividades realizadas en una organización, diferenciadas por la división del trabajo. Por tanto, la administración es imprescindible para la existencia, la supervivencia y el éxito de las organizaciones.
 
@@ -124,30 +111,30 @@ d. _Negociación:_ representa a la organización en negociaciones con otros acto
 
 ---
 
-_""_
+> _""_
 
 #### Lautaro Faccini
 
 ---
 
-_""_
+> _""_
 
 #### Felipe Fidanza
 
 ---
 
-_"Esta considero que fue una actividad útil para recordar algunos conceptos que lo venimos viendo a lo largo de la carrera, y asentarlos al relacionarlos entre sí, como es el caso de los niveles estratégicos en una organización, junto con las tres habilidades para el desempeño administrativo exitoso. Además es necesario desarrollar las competencias que se destacan en el punto 1, para estar capacitado en un futuro, a tomar el cargo de gerente."_
+> _"Esta considero que fue una actividad útil para recordar algunos conceptos que lo venimos viendo a lo largo de la carrera, y asentarlos al relacionarlos entre sí, como es el caso de los niveles estratégicos en una organización, junto con las tres habilidades para el desempeño administrativo exitoso. Además es necesario desarrollar las competencias que se destacan en el punto 1, para estar capacitado en un futuro, a tomar el cargo de gerente."_
 
 #### Yamil Moselli
 
 ---
 
-_""_
+> _""_
 
 #### Tobías Stegmayer
 
 ---
 
-_"Esta actividad me ayudó a conectar conceptos y entender que el rol del administrador cambia según el nivel en el que actúa. Me quedó claro que no alcanza con saber hacer, sino que es clave saber trabajar con otros y, sobre todo, entender la organización como un todo._
+> _"Esta actividad me ayudó a conectar conceptos y entender que el rol del administrador cambia según el nivel en el que actúa. Me quedó claro que no alcanza con saber hacer, sino que es clave saber trabajar con otros y, sobre todo, entender la organización como un todo._
 
-_También me resultó interesante cómo los roles de Mintzberg bajan a tierra lo que realmente hace un gerente en el día a día. No es solo planificar o controlar, sino estar constantemente interactuando, comunicando y tomando decisiones en contextos muchas veces inciertos."_
+> _También me resultó interesante cómo los roles de Mintzberg bajan a tierra lo que realmente hace un gerente en el día a día. No es solo planificar o controlar, sino estar constantemente interactuando, comunicando y tomando decisiones en contextos muchas veces inciertos."_
