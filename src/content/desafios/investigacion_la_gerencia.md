@@ -7,17 +7,18 @@ heroImage: "../../assets/lagerencia.jpg"
 
 
 
-La administración no es otra cosa que la dirección racional de las actividades de una organización, con o sin fines de lucro. Ella implica planeación, organización (estructura), dirección y control de las actividades realizadas en una organización, diferenciadas por la división del trabajo. Por tanto, la administración es imprescindible para la existencia, la supervivencia y el éxito de las organizaciones.
+La administración no es otra cosa que la dirección racional de las actividades de una organización. Esta disciplina implica planeación, organización (estructura), dirección y control de las actividades realizadas en una organización, caracterizadas por la división del trabajo. Por lo tanto, esta es imprescindible para la existencia, la supervivencia y el éxito de las organizaciones.
 
-El éxito de un administrador depende más de su desempeño y de cómo trata a las personas y las situaciones, según sus características de personalidad; depende de lo que el administrador logra y no de lo que es. Este desempeño es el resultado de las habilidades que el administrador tiene y utiliza. Una habilidad es la capacidad de transformar conocimiento en acción, que resulta en un desempeño esperado.
+El éxito de un administrador esta medido por su desempeño: lo que el administrador logra, y no tanto por cómo es, sea a la hora de tratar con personas o afrontrar las situaciones que se presenten. Los resultados son alcanzados a través dfe las habilidades del administrador y cómo transforma el conocimiento en acciónes efectivas.
+
 
 ---
 
 ## Tres habilidades para el desempeño administrativo exitoso
 
-_Según Katz, existen tres habilidades importantes para el desempeño administrativo exitoso: técnica, humana y conceptual. ¿En qué consiste las habilidades técnicas, humanas y conceptuales? ¿Cómo se relacionan las habilidades mencionadas con la pirámide organizacional? Estas habilidades, ¿qué otras competencias personales exigen? Describir cada una de ellas. ¿Por qué es importante que un gerente tenga estas competencias? ¿Cuál de estas tres competencias considera que es la más importante?_
+_Según Katz, existen tres habilidades importantes para el desempeño administrativo exitoso: técnica, humana y conceptual. ¿En qué consisten las habilidades técnicas, humanas y conceptuales? ¿Cómo se relacionan las habilidades mencionadas con la pirámide organizacional? Estas habilidades, ¿qué otras competencias personales exigen? Describir cada una de ellas. ¿Por qué es importante que un gerente tenga estas competencias? ¿Cuál de estas tres competencias considera que es la más importante?_
 
-Según Katz, todo gerente necesita tres habilidades básicas para desempeñarse con éxito: técnica, humana y conceptual. Lo define de la siguiente manera:
+Según Katz, todo gerente necesita tres habilidades básicas para desempeñarse con éxito: técnica, humana y conceptual. Las define de la siguiente manera:
 
 - **Habilidad técnica:** es la destreza para usar procedimientos, técnicas y conocimientos propios de un campo especializado. Por ejemplo, cirujanos, ingenieros, músicos o contadores poseen habilidades técnicas en sus respectivos campos. En una organización, supone dominar las herramientas, métodos y procedimientos específicos del área en que se trabaja (producción, contabilidad, informática, etc.).
 
@@ -33,7 +34,7 @@ Si bien las tres habilidades son esenciales para cualquier gerente, su importanc
 - En la **gerencia media** (jefes de departamento, gerentes de área) la habilidad más relevante es la humanista, ya que su rol central consiste en articular a subordinados y superiores, coordinar equipos y traducir las políticas de la alta gerencia en acción operativa.
 - En la **alta gerencia** (directores, ejecutivos máximos) prevalece la habilidad conceptual, porque deben trazar estrategias, entender la organización como un todo y su relación con el entorno.
 
-De las tres habilidades básicas habladas, se desprenden otras competencias personales necesarias que todo gerente eficaz debería poseer, entre ellas:
+De las tres habilidades básicas mencionadas, se desprenden otras competencias personales necesarias que todo gerente eficaz debería poseer, entre ellas:
 
 - _Comunicación efectiva,_ tanto oral como escrita, para transmitir ideas con claridad a colaboradores, pares y superiores.
 - _Liderazgo,_ entendido como la capacidad de influir, orientar y motivar a otros hacia el logro de objetivos.
@@ -48,7 +49,7 @@ Para un gerente, estas habilidades/competencias son importantes porque su desemp
 
 ### ¿Cuál es la más importante?
 
-Consideramos que depende del nivel estratégico al cual nos referimos, como hablamos anteriormente, cada nivel se corresponde mejor con una de las competencias, pues es esta la que desarrollan en el día a día. Por ello, la más importante dentro de cada nivel estratégico es la habilidad que mejor se adapta para la tarea que realizan. Esto es, la más importante para los niveles operativos son las competencias técnicas, la más importante para la gerencia media es la humana, y la más importante para la alta gerencia es la conceptual.
+Consideramos que depende del nivel estratégico al cual nos referimos, como hablamos anteriormente, cada nivel se corresponde mejor con una de las competencias, pues es esta la que desarrolla en el día a día. Por ello, la más importante dentro de cada nivel estratégico es la habilidad que mejor se adapta para la tarea que realizan. Esto es, la más importante para los niveles operativos son las competencias técnicas, la más importante para la gerencia media es la humana, y la más importante para la alta gerencia es la conceptual.
 
 Ahora bien, desde el punto de vista del éxito global de la organización la habilidad conceptual tiende a considerarse la más importante, porque es la que permite al gerente comprender la organización como un sistema, tomar decisiones estratégicas y adaptarla a un entorno cambiante. Un error técnico puede corregirse; un error conceptual (por ejemplo una mala lectura del mercado, una estrategia equivocada) puede comprometer la existencia misma de la empresa.
 
@@ -58,7 +59,7 @@ Ahora bien, desde el punto de vista del éxito global de la organización la hab
 
 _Mintzberg prefiere identificar diez papeles específicos del administrador, distribuidos en tres categorías: interpersonal, informativa y decisoria. ¿En qué consiste cada una de ellas?_
 
-Como dice Chiavenato en su libro, Henry Mintzberg, a partir de estudios empíricos sobre el trabajo real de los gerentes, sostuvo que más que planear, organizar, dirigir y controlar de manera lineal, los administradores desempeñan un conjunto de diez papeles o roles específicos, agrupados en tres categorías: interpersonal, informativa y decisoria.
+Como dice Chiavenato en su libro, Henry Mintzberg a partir de estudios empíricos sobre el trabajo real de los gerentes, sostuvo que más que planear, organizar, dirigir y controlar de manera lineal, los administradores desempeñan un conjunto de diez papeles o roles específicos, agrupados en tres categorías: interpersonal, informativa y decisoria.
 
 ---
 
@@ -99,7 +100,7 @@ a. _Emprendedor:_ busca oportunidades de mejora e inicia proyectos de cambio, in
 
 b. _Manejo de disturbios (solucionador de conflictos):_ actúa cuando surgen crisis, conflictos o situaciones imprevistas, tomando decisiones correctivas para restablecer el equilibrio.
 
-c. _Asignación de recursos:_ distribuye los recursos de la organización (por ejemplo tiempo, dinero, personal, equipos, autoridad) estableciendo prioridades y autorizando decisiones importantes de su unidad.
+c. _Asignación de recursos:_ distribuye los recursos de la organización (por ejemplo, tiempo, dinero, personal, equipos, autoridad) estableciendo prioridades y autorizando decisiones importantes de su unidad.
 
 d. _Negociación:_ representa a la organización en negociaciones con otros actores (sindicatos, proveedores, clientes, socios, gobierno), buscando acuerdos favorables para la empresa.
 
@@ -111,7 +112,7 @@ d. _Negociación:_ representa a la organización en negociaciones con otros acto
 
 ---
 
-> _""_
+> _"La actividad me sirvió como repaso sobre qué es ser un Administrador dentro de una organización y cuáles son las características que se espera de alguien en esa posición, así como también los roles que juega dentro de la organización. Me gustó como Chiavenato caracteriza al Administrador como el *centro nervioso* de información porque realmente debe estar en todas partes"_
 
 #### Lautaro Faccini
 

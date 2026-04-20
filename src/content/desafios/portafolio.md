@@ -20,7 +20,7 @@ Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendiz
 
 ---
 
-> _""_
+> _"Me gustó la idea de crear un portafolio para mostrar el trabajo que realizamos. Pienso que es una buena medida para visibilizar el aprendizaje de cada uno a lo largo de la cursada, y luego poder mirar en retrospectiva nuestra evolución."_
 
 #### Lautaro Faccini
 
