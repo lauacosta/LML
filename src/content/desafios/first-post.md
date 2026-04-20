@@ -38,7 +38,7 @@ Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendiz
 
 ---
 
-> _""_
+> _"Considero que la actividad de el sitio web nos sirve para llevar un registro de nuestro progreso como equipo a lo largo del cuatrimestre. Lo veo como una forma mas llamativa de presentar nuestras actividades."_
 
 #### Tobías Stegmayer
 
