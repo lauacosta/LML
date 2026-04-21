@@ -96,13 +96,14 @@ Agrupa los roles relacionados con recibir, procesar y transmitir información. C
 ---
 
 Comprende los roles en los que el administrador utiliza la información disponible para decidir. Son cuatro papeles:
-a. _Emprendedor:_ busca oportunidades de mejora e inicia proyectos de cambio, innovación o adaptación, promoviendo el desarrollo y crecimiento de la organización.
 
-b. _Manejo de disturbios (solucionador de conflictos):_ actúa cuando surgen crisis, conflictos o situaciones imprevistas, tomando decisiones correctivas para restablecer el equilibrio.
+- _Emprendedor:_ busca oportunidades de mejora e inicia proyectos de cambio, innovación o adaptación, promoviendo el desarrollo y crecimiento de la organización.
 
-c. _Asignación de recursos:_ distribuye los recursos de la organización (por ejemplo, tiempo, dinero, personal, equipos, autoridad) estableciendo prioridades y autorizando decisiones importantes de su unidad.
+- _Manejo de disturbios (solucionador de conflictos):_ actúa cuando surgen crisis, conflictos o situaciones imprevistas, tomando decisiones correctivas para restablecer el equilibrio.
 
-d. _Negociación:_ representa a la organización en negociaciones con otros actores (sindicatos, proveedores, clientes, socios, gobierno), buscando acuerdos favorables para la empresa.
+- _Asignación de recursos:_ distribuye los recursos de la organización (por ejemplo, tiempo, dinero, personal, equipos, autoridad) estableciendo prioridades y autorizando decisiones importantes de su unidad.
+
+- _Negociación:_ representa a la organización en negociaciones con otros actores (sindicatos, proveedores, clientes, socios, gobierno), buscando acuerdos favorables para la empresa.
 
 ---
 
