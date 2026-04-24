@@ -25,7 +25,7 @@ Construir un Portfolio digital (micrositio) que evidencie el proceso de aprendiz
 
 ---
 
-> _""_
+> _"Me parece una propuesta muy útil, porque nos permite organizar y mostrar de forma clara todo lo que fuimos aprendiendo. Además, creo que ayuda a tomar conciencia de nuestro propio progreso y a valorar el trabajo en equipo a lo largo de la cursada."_
 
 #### Felipe Fidanza
 
