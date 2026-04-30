@@ -7,6 +7,11 @@ import { getCollection } from "astro:content";
 const posts = (await getCollection("desafios")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+import tobi from "../assets/equipo/tobianime.png";
+import yamil from "../assets/equipo/yamilanime.png";
+import lauti from "../assets/equipo/lautianime.png";
+import feli from "../assets/equipo/felianime.png";
+import faccini from "../assets/equipo/faccanime.png";
 ---
 
 <Layout
@@ -14,6 +19,48 @@ const posts = (await getCollection("desafios")).sort(
   description="LML Gestión es un equipo de trabajo conformado por Lautaro Acosta, Lautaro Faccini, Felipe Fidanza, Tobias Stegmayer y Moselli Yamil; alumnos de la catedra de Gestión Gerencial. Este portfolio tiene como objetivo presentar las actividades realizadas en el cursado de la materia.">
   <main>
     <section class="hero-section">
+      <div class="team-img">
+        <!-- Repite este bloque para cada integrante -->
+        <div class="member-wrapper lauti-container">
+          <span class="tooltip">Lautaro Acosta</span>
+          <Image
+            src={lauti}
+            alt="Lautaro Acosta"
+            class="member-img lauti"
+            ...
+          />
+        </div>
+
+        <div class="member-wrapper faccini-container">
+          <span class="tooltip">Lautaro Faccini</span>
+          <Image
+            src={faccini}
+            alt="Lautaro Faccini"
+            class="member-img faccini"
+            ...
+          />
+        </div>
+
+        <div class="member-wrapper feli-container">
+          <span class="tooltip">Felipe Fidanza</span>
+          <Image src={feli} alt="Felipe Fidanza" class="member-img feli" ... />
+        </div>
+
+        <div class="member-wrapper tobi-container">
+          <span class="tooltip">Tobías Stegmayer</span>
+          <Image
+            src={tobi}
+            alt="Tobías Stegmayer"
+            class="member-img tobi"
+            ...
+          />
+        </div>
+
+        <div class="member-wrapper yamil-container">
+          <span class="tooltip">Yamil Moselli</span>
+          <Image src={yamil} alt="Yamil Moselli" class="member-img yamil" ... />
+        </div>
+      </div>
       <div class="hero-wrapper">
         <h1>lml gestión</h1>
         <div class="hero-info">
@@ -122,9 +169,111 @@ const posts = (await getCollection("desafios")).sort(
     justify-content: end;
     align-items: center;
 
+    position: relative;
+    overflow: hidden;
+
     h1 {
       font-family: "Epoch", "Sans Serif";
     }
+  }
+
+  .team-img {
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .member-wrapper {
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Tooltip: Ajuste de posición general para que flote sobre la cabeza */
+  .tooltip {
+    position: absolute;
+    top: -3.5rem; /* Ajuste fino para la altura del tooltip */
+    background: rgba(0, 40, 66, 0.9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    pointer-events: none;
+    z-index: 20;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .member-img {
+    height: auto;
+    width: 100%; /* El tamaño lo define el wrapper */
+    object-fit: cover;
+  }
+
+  /* --- Lógica de Hover (Desktop) --- */
+  @media (hover: hover) {
+    .team-img:has(.member-wrapper:hover) .member-wrapper {
+      filter: brightness(50%);
+    }
+
+    .member-wrapper:hover {
+      filter: brightness(100%) !important;
+    }
+
+    .member-wrapper:hover .tooltip {
+      opacity: 1;
+    }
+  }
+
+  /* Control de tamaños relativos */
+  .feli-container {
+    width: 21%;
+    margin-right: -6%;
+    margin-left: -6%;
+    bottom: -2rem; /* Pequeña elevación original */
+    z-index: 5;
+  }
+
+  /* Tobías (Izquierda - Detrás de Felipe, más a la izquierda que Lautaro Faccini) */
+  .tobi-container {
+    width: 19%;
+    margin-right: -6%;
+
+    bottom: -7rem;
+    z-index: 4;
+  }
+
+  /* Lautaro Faccini (Derecha - Detrás de Felipe, más a la derecha que Lautaro Acosta) */
+  .faccini-container {
+    width: 18%;
+    margin-left: -4.5%; /* Recupera el solapamiento */
+    bottom: -8rem;
+    z-index: 4;
+  }
+
+  /* Yamil (Extrema Izquierda - Más atrás, más pequeño) */
+  .yamil-container {
+    width: 15%;
+    margin-right: -12%; /* Recupera el solapamiento extremo */
+    bottom: -7rem;
+    z-index: 3;
+  }
+
+  /* Lautaro Acosta (Extrema Derecha - Más atrás, más pequeño) */
+  .lauti-container {
+    width: 15%;
+    margin-left: -8%; /* Recupera el solapamiento extremo */
+    bottom: -6rem;
+    z-index: 3;
   }
 
   .hero-wrapper {
@@ -139,6 +288,7 @@ const posts = (await getCollection("desafios")).sort(
     justify-content: end;
     align-items: center;
     gap: 2rem;
+    z-index: 10;
     h1 {
       color: #fff;
       font-size: 10rem;
@@ -157,14 +307,151 @@ const posts = (await getCollection("desafios")).sort(
       }
     }
   }
-
-  @media (max-width: 900px) {
-    .hero-wrapper h1 {
-      font-size: 5rem;
+  @media (max-width: 1100px) {
+    .feli-container {
+      width: 50%;
+      margin-right: -9%;
+      margin-left: -9%;
+      bottom: -6em; /* Pequeña elevación original */
+      z-index: 5;
     }
 
-    h2 {
-      font-size: 4rem;
+    /* Tobías (Izquierda - Detrás de Felipe, más a la izquierda que Lautaro Faccini) */
+    .tobi-container {
+      width: 45%;
+      margin-right: -13%;
+
+      bottom: -12rem;
+      z-index: 4;
+    }
+
+    /* Lautaro Faccini (Derecha - Detrás de Felipe, más a la derecha que Lautaro Acosta) */
+    .faccini-container {
+      width: 45%;
+      margin-left: -9.5%; /* Recupera el solapamiento */
+      bottom: -17rem;
+      z-index: 4;
+    }
+
+    /* Yamil (Extrema Izquierda - Más atrás, más pequeño) */
+    .yamil-container {
+      width: 39%;
+
+      bottom: -16rem;
+      z-index: 3;
+    }
+
+    /* Lautaro Acosta (Extrema Derecha - Más atrás, más pequeño) */
+    .lauti-container {
+      width: 39%;
+
+      bottom: -14rem;
+      z-index: 3;
+    }
+  }
+
+  @media (max-width: 730px) {
+    .feli-container {
+      width: 50%;
+      margin-right: -9%;
+      margin-left: -9%;
+      bottom: -3rem; /* Pequeña elevación original */
+      z-index: 5;
+    }
+
+    /* Tobías (Izquierda - Detrás de Felipe, más a la izquierda que Lautaro Faccini) */
+    .tobi-container {
+      width: 46%;
+      margin-right: -13%;
+
+      bottom: -8rem;
+      z-index: 4;
+    }
+
+    /* Lautaro Faccini (Derecha - Detrás de Felipe, más a la derecha que Lautaro Acosta) */
+    .faccini-container {
+      width: 44%;
+      margin-left: -9.5%; /* Recupera el solapamiento */
+      bottom: -9rem;
+      z-index: 4;
+    }
+
+    /* Yamil (Extrema Izquierda - Más atrás, más pequeño) */
+    .yamil-container {
+      width: 36%;
+
+      bottom: -8rem;
+      z-index: 3;
+    }
+
+    /* Lautaro Acosta (Extrema Derecha - Más atrás, más pequeño) */
+    .lauti-container {
+      width: 36%;
+
+      bottom: -6rem;
+      z-index: 3;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-section {
+      justify-content: center; /* Centra el contenido verticalmente */
+    }
+
+    .team-img {
+      bottom: 5%; /* Sube las fotos para que no las tape el texto */
+      flex-wrap: nowrap;
+    }
+
+    .hero-wrapper {
+      bottom: 0;
+    }
+    .hero-wrapper h1 {
+      font-size: 4rem; /* Reducir tamaño de fuente según lo planeado */
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .feli-container {
+      width: 50%;
+      margin-right: -9%;
+      margin-left: -9%;
+      bottom: -3rem; /* Pequeña elevación original */
+      z-index: 5;
+    }
+
+    /* Tobías (Izquierda - Detrás de Felipe, más a la izquierda que Lautaro Faccini) */
+    .tobi-container {
+      width: 49%;
+      margin-right: -13%;
+
+      bottom: -6rem;
+      z-index: 4;
+    }
+
+    /* Lautaro Faccini (Derecha - Detrás de Felipe, más a la derecha que Lautaro Acosta) */
+    .faccini-container {
+      width: 49%;
+      margin-left: -9.5%; /* Recupera el solapamiento */
+      bottom: -8rem;
+      z-index: 4;
+    }
+
+    /* Yamil (Extrema Izquierda - Más atrás, más pequeño) */
+    .yamil-container {
+      width: 41%;
+
+      bottom: -6rem;
+      z-index: 3;
+    }
+
+    /* Lautaro Acosta (Extrema Derecha - Más atrás, más pequeño) */
+    .lauti-container {
+      width: 41%;
+
+      bottom: -6rem;
+      z-index: 3;
     }
   }
 
